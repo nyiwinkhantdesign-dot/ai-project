@@ -1,0 +1,12 @@
+flowchart TD
+    A[Start] --> B[Load CSV]
+    B --> C[Clean data - rename DPF]
+    C --> D[Replace zeros with NaN]
+    D --> E[Impute NaN values]
+    E --> F[Train Test Split]
+    F --> G[Scale features]
+    G --> H[Train RandomForest]
+    H --> I[Cross validation]
+    I --> J[Evaluate on test set]
+    J --> K[Predict new samples]
+    K --> L[End]
